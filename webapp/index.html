@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fiori Element</title>
+	<script type="text/javascript">
+		window["sap-ushell-config"] = {
+			defaultRenderer : "fiori3",
+            bootstrapPlugins: {
+                "RuntimeAuthoringPlugin": {
+                    component: "sap.ushell.plugins.rta",
+                    config: {
+                        validateAppVersion: false
+                    }
+                }
+            },
+			renderers: {
+				fiori3: {
+					componentData: {
+						config: {
+							search: "hidden"
+						}
+					}
+				}
+			},
+			applications: {
+				"Orders-display": {
+					additionalInformation: "SAPUI5.Component=fe_sample",
+					applicationType: "URL",
+					url: "../"
+				}
+			}
+		};
+	</script>
+		<script id="sap-ui-bootstrap"
+			src="https://wechat.coresystems.cn/sapui5/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{"fe_sample": "./"}'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-async="true"
+			data-sap-ui-frameOptions="trusted">
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div data-sap-ui-component data-name="fe_sample" data-id="container" data-settings='{"id" : "Dashboard"}'></div>
+	</body>
+</html>
